@@ -1667,7 +1667,7 @@ function addEmployee() {
   } else if (!validateName(name)) {
     alert("Tên không đúng định dạng!");
     return;
-  } else if (!validateName(position)) {
+  } else if (!validatePosition(position)) {
     alert("Chức vụ không đúng định dạng!");
     return;
   }
@@ -1772,7 +1772,7 @@ function updateNhanVien() {
   } else if (!validateName(employee.name)) {
     alert("Tên không đúng định dạng!");
     return;
-  } else if (!validateName(employee.position)) {
+  } else if (!validatePosition(employee.position)) {
     alert("Chức vụ không đúng định dạng!");
     return;
   }
@@ -1782,6 +1782,10 @@ function updateNhanVien() {
   closeSuaForm();
 }
 
+function validatePosition(position) {
+  const validPositions = ["Quản lý", "Nhân viên"];
+  return validPositions.includes(position);
+}
 // Xóa nhân viên
 function deleteEmployee(id) {
   let employees = JSON.parse(localStorage.getItem("employees")) || [];

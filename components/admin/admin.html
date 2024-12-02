@@ -280,8 +280,12 @@
 
           <br />
           <label for="themChucVu">Chức vụ:</label>
-          <input type="text" id="themChucVu" placeholder="Nhập chức vụ" />
-
+          <!-- <input type="text" id="themChucVu" placeholder="Nhập chức vụ" /> -->
+          <select id="themChucVu" required>
+            <option value="Quản lý">Quản lý</option>
+            <option value="Nhân viên">Nhân viên</option>
+          </select>
+          <br/>
           <div>
             <button type="button" name="them" id="addNV">Thêm</button>
           </div>
@@ -304,7 +308,12 @@
 
           <br />
           <label for="suaChucVu">Chức vụ:</label>
-          <input type="text" id="suaChucVu" placeholder="Nhập chức vụ" />
+          <!-- <input type="text" id="suaChucVu" placeholder="Nhập chức vụ" /> -->
+          <select id="suaChucVu" required>
+            <option value="Quản lý">Quản lý</option>
+            <option value="Nhân viên">Nhân viên</option>
+          </select>
+          <br/>
 
           <br />
           <label for="suaTrangThai">Trạng thái: </label>
@@ -369,6 +378,7 @@
       </div>
 
       <!--   end nhân viên  -->
+
       <div class="content hidden" id="customers">
         <h2>Khách hàng</h2>
         <div class="client-search">
